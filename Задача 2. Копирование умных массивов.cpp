@@ -65,12 +65,18 @@ public:
         if (index >= size) {
             throw std::out_of_range("Index out of range");
         }
+        else if (index < 0) {
+            throw std::out_of_range("Index should not be negative");
+        }
         return arr[index];
     }
 
     const int& operator[](int index) const {
         if (index >= size) {
             throw std::out_of_range("Index out of range");
+        }
+        else if (index < 0) {
+            throw std::out_of_range("Index should not be negative");
         }
         return arr[index];
     }
